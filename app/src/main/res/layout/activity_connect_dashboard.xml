@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/provider_image_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/animation"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/provider_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c6c6c6" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/animation"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="-20dp"
+            android:src="@drawable/baseline_keyboard_double_arrow_down_24"
+            app:layout_constraintBottom_toTopOf="@+id/client_image_card"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/provider_image_card" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/client_image_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/animation">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/client_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#c6c6c6" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="77dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:background="#E8E8E8"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="Dashboard"
+            android:textColor="#c6c6c6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="#E8E8E8"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        app:cardBackgroundColor="#00bbff"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="-1dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/call"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00bbff"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_wifi_calling_3_24" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="-1dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chat"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00bbff"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_message_24" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bubbleCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardCornerRadius="20dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/bubbleText"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="-1dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/payment"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00bbff"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_payment_24" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="-1dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/prescriptions"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00bbff"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_medical_services_24" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="0"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="-1dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00bbff"
+                    android:padding="8dp"
+                    android:src="@drawable/baseline_medical_services_24" />
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/visitProviderProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="visit provider profile" />
+
+        <Button
+            android:id="@+id/visitYourProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="visit your profile" />
+
+        <Button
+            android:id="@+id/makeCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="make call" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="chat" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="payment" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:id="@+id/imageContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:background="#69D7FF"
+                android:id="@+id/image"
+                android:layout_height="40dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:background="#F1F1F1"
+            android:layout_marginLeft="132dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_height="2dp"/>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageContainer"
+            app:layout_constraintTop_toTopOf="@+id/imageContainer"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="60dp"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                tools:text="Full Name"
+
+                android:paddingRight="5dp"
+                android:background="#ffffff"
+                android:layout_marginTop="6dp"
+                android:textStyle="bold"
+                android:id="@+id/name"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:textSize="14dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/serviceType"
+                tools:text="Service type: Medical personnel"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                tools:text="Category: Psychology"
+                android:textSize="14dp"
+                android:id="@+id/category"
+                android:layout_height="wrap_content"/>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                tools:text="Date and time"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/roundedbox_grey"
+                android:id="@+id/dateAndTime"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:textSize="12dp"
+                android:layout_height="wrap_content"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:id="@+id/imageContainer2"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="right"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:background="#888888"
+                android:id="@+id/image2"
+                android:layout_height="30dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.cardview.widget.CardView>

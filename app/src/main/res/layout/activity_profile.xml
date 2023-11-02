@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#00bbff"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/premiumCard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="22.5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/premium"
+                android:text="  Premium Settings  "
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:layout_height="26dp"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:background="#000000"
+                android:scaleType="centerCrop"
+                 />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+
+            android:layout_height="25dp" />
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_height="100dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="40dp"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+
+                    android:id="@+id/profile_picture"
+                    android:scaleType="centerCrop"
+                    android:layout_height="80dp"/>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="35dp"
+                    android:id="@+id/choose_profile_picture"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+
+                    android:layout_gravity="center"
+                    android:layout_height="35dp"/>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleY="0.4"
+                android:rating="4"
+                android:id="@+id/rating_bar"
+                android:theme="@style/Theme.Design.Light"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="-60dp"
+                android:scaleX="0.4"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:elevation="100dp"
+            android:background="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="match_parent"
+            android:id="@+id/content"
+            app:cardBackgroundColor="#ffffff"
+            app:cardElevation="-1dp"
+            android:layout_marginBottom="-50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="150dp"
+            android:layout_height="match_parent">
+
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_height="match_parent">
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Details"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14dp"
+                        android:textColor="#00bbff"
+                        android:visibility="gone"
+                        android:id="@+id/edit1"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Edit +"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="First name"
+                    android:background="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/first_name"
+                    android:layout_height="40dp"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="Last name"
+                    android:background="#ffffff"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/last_name"
+                    android:layout_height="40dp"/>
+
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="Phone number"
+                    android:id="@+id/phone_number"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15sp"
+                    android:background="#ffffff"
+                    android:layout_height="40dp"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="Email"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15sp"
+                    android:background="#ffffff"
+                    android:id="@+id/email"
+                    android:layout_height="40dp"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="Date of birth"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15sp"
+                    android:background="#ffffff"
+                    android:id="@+id/date_of_birth"
+                    android:layout_height="40dp"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="Gender"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15sp"
+                    android:id="@+id/gender"
+                    android:background="#ffffff"
+                    android:layout_height="40dp"/>
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:hint="Nin"
+                    android:background="#ffffff"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="15sp"
+                    android:id="@+id/nin"
+                    android:layout_height="40dp"/>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:id="@+id/subname"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Specialties"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="14dp"
+                        android:id="@+id/edit2"
+                        android:textColor="#00bbff"
+                        android:visibility="gone"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="Edit +"/>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#C10000"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="50dp"
+                    android:textSize="14dp"
+                    android:id="@+id/logout"
+                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="Log out"/>
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

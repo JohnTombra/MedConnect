@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".medicalpersonnel.ui.screens.SetupActivity1">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/firstName"
+            android:hint="First name"
+            android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/lastName"
+            android:hint="Last name"
+            android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/phoneNumber"
+            android:hint="Phone number"
+            android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/email"
+            android:hint="Email"
+            android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/gender"
+            android:hint="Gender"
+            android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/field"
+            android:hint="Medical Field"
+            android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/specialty"
+            android:hint="Specialty"
+            android:layout_height="60dp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/country"
+            android:hint="Country"
+            android:layout_height="60dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/state"
+            android:hint="State"
+            android:layout_height="60dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/locale"
+            android:hint="Area"
+            android:layout_height="60dp"/>
+
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/connectionCharge"
+            android:hint="Connection charge"
+            android:layout_height="60dp"/>
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/submit"
+            android:hint="Submit"
+            android:layout_height="60dp"/>
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

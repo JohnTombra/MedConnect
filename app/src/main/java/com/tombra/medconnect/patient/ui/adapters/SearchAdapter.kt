@@ -1,0 +1,76 @@
+package com.tombra.medconnect.patient.ui.adapters
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.google.firebase.database.FirebaseDatabase
+import com.tombra.medconnect.data.model.MedicalPersonnel
+import com.tombra.medconnect.data.repository.Repository
+import com.tombra.medconnect.databinding.ConnectBinding
+
+
+class SearchAdapter(val callback: (Int)-> Unit) :
+    ListAdapter<MedicalPersonnel, SearchAdapter.ChatViewHolder>(DiffCallBack()) {
+
+    lateinit var context: Context
+
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ChatViewHolder {
+        context = viewGroup.context
+        val inflater = LayoutInflater.from(context)
+        val binding = ConnectBinding.inflate(inflater, viewGroup, false)
+        return ChatViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
+
+
+
+        with(holder) {
+            with(getItem(position)) {
+
+                Glide.with(context).load(picture).centerCrop().into(binding.image)
+                binding.name.text = "${firstName} ${lastName}"
+                binding.serviceType.text = "${department}"
+                binding.category.text = "${subDepartment}"
+
+                binding.dateAndTime.text = "2/10/2023" //myDateFormatter(request.time)
+
+                FirebaseDatabase.getInstance().reference.child("patients/${Repository._patientId}/profile/picture").get().addOnSuccessListener {
+                    if(it.exists()){
+                        Glide.with(context).load(it.getValue(String::class.java)).centerCrop().into(binding.image2)
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    class DiffCallBack() : DiffUtil.ItemCallback<MedicalPersonnel>() {
+        override fun areItemsTheSame(oldItem: MedicalPersonnel, newItem: MedicalPersonnel) =
+            oldItem.id == newItem.id
+
+        override fun areContentsTheSame(oldItem: MedicalPersonnel, newItem: MedicalPersonnel) =
+            oldItem == newItem
+    }
+
+    inner class ChatViewHolder(val binding: ConnectBinding) : RecyclerView.ViewHolder(binding.root){
+
+
+        init{
+            binding.root.setOnClickListener {
+                val position: Int = adapterPosition
+                if (position != RecyclerView.NO_POSITION){
+                        callback(position)
+                }
+            }
+        }
+
+
+    }
+
+}
